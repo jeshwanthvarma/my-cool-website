@@ -406,14 +406,15 @@
 
 /* Fix for profile image alignment */
 .profile-avatar img {
-    width: 100%;
+    width: auto;
     height: 100%;
-    object-fit: contain; /* CHANGED FROM 'cover' TO 'contain' */
+    max-width: 100%;
     border-radius: 50%;
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .floating-card:hover .profile-avatar {
