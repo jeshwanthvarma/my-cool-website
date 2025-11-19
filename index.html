@@ -406,21 +406,21 @@
 
 /* Fix for profile image alignment */
 .profile-avatar img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
+    object-fit: cover;
     border-radius: 50%;
     display: block;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
 }
 
 .floating-card:hover .profile-avatar {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
 }
+
 
         /* 
         This is a comment 
