@@ -1671,10 +1671,10 @@
             <div class="hero-image">
                 <div class="floating-card">
                     <div class="profile-avatar">
-                        <img src="my-photo.jpg.jpg" alt="Jeshwanth Varma">
+                        <img src="my-photo.jpg.jpg" alt="Jeshwanth Varma" loading="lazy" width="180" height="180">
                     </div>
                     <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem;">Cloud Engineer </h3>
-                    <p style="padding:0; margin: 0 0 1.5rem; color: var(--accent);"> Junior DevOps & cloud Engineer </p>
+                    <p style="padding:0; margin: 0 0 1.5rem; color: var(--accent);">Junior DevOps & Cloud Engineer</p>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/jeshwanth-varma" target="_blank" class="social-link" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
@@ -2027,7 +2027,7 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="copyright">
-                    &copy; 2025 Jeshwanth Varma M V i. All Rights Reserved.
+                    &copy; 2025 Jeshwanth Varma M V. All Rights Reserved.
                 </div>
             </div>
         </div>
@@ -2302,6 +2302,19 @@ const projectDetails = {
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
+        
+        // Mobile performance optimization
+        if (window.innerWidth < 768) {
+            // Optimize images for mobile
+            document.querySelectorAll('img').forEach(img => {
+                img.loading = 'lazy';
+            });
+            
+            // Improve text rendering
+            document.body.style.fontKerning = 'normal';
+            document.body.style.webkitFontSmoothing = 'antialiased';
+            document.body.style.mozOsxFontSmoothing = 'grayscale';
+        }
     </script>
 </body>
 </html>
